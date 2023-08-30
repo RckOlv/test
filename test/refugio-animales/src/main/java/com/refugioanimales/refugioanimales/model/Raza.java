@@ -5,12 +5,16 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.util.List;
+
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+@Getter @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
-@Getter
-@Setter
 @Table(name = "raza")
 public class Raza {
 
@@ -26,15 +30,5 @@ public class Raza {
 
     @OneToMany(mappedBy = "raza")
     List<Animal> listaAnimales;
-
-    public Raza() {
-    }
-
-    public Raza(Long id_raza, String nombre, Tipo tipo, List<Animal> listaAnimales) {
-        this.id_raza = id_raza;
-        this.nombre = nombre;
-        this.tipo = tipo;
-        this.listaAnimales = listaAnimales;
-    }
 
 }

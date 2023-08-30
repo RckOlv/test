@@ -3,11 +3,16 @@ package com.refugioanimales.refugioanimales.model;
 import jakarta.persistence.*;
 
 import java.util.List;
+
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Entity
 @Getter @Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
 @Table(name = "evento")
 public class Evento {
     
@@ -19,15 +24,4 @@ public class Evento {
     @OneToMany(mappedBy = "evento")
     List<Historial> listaHistorial;
 
-    public Evento() {
-    }
-
-    public Evento(Long id_evento, String nombre, List<Historial> listaHistorial) {
-        this.id_evento = id_evento;
-        this.nombre = nombre;
-        this.listaHistorial = listaHistorial;
-    }
-
-    
-    
 }

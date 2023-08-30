@@ -4,12 +4,16 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.util.List;
+
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+@Getter @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
-@Getter
-@Setter
 @Table(name = "animal")
 public class Animal {
 
@@ -31,18 +35,5 @@ public class Animal {
     @JoinColumn(name = "id_raza")
     @JsonIgnore //importante agregar para evitar errores de formato en la response
     private Raza raza;
-
-    public Animal() {
-    }
-
-    public Animal(Long id_animal, Double peso, boolean estaCastrado, String tamañoEsperado, List<Historial> listaHistorial, Tipo tipo, Raza raza) {
-        this.id_animal = id_animal;
-        this.peso = peso;
-        this.estaCastrado = estaCastrado;
-        this.tamañoEsperado = tamañoEsperado;
-        this.listaHistorial = listaHistorial;
-        this.tipo = tipo;
-        this.raza = raza;
-    }
 
 }

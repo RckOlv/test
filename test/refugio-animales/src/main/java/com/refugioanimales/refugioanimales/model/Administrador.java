@@ -4,14 +4,17 @@ package com.refugioanimales.refugioanimales.model;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.List;
 
+@Getter @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
-@Getter
-@Setter
 @Table(name = "administrador")
 public class Administrador extends Persona {
 
@@ -23,22 +26,5 @@ public class Administrador extends Persona {
     
     @OneToMany(mappedBy = "administrador")
     private List<Historial> listaHistorial;
-
-    public Administrador() {
-    }
-
-    public Administrador(String usuario, String clave, List<Historial> listaHistorial, String nombre, String apellido, String direccion, String telefono, String sexo, String dni) {
-        super(nombre, apellido, direccion, telefono, sexo, dni);
-        this.usuario = usuario;
-        this.clave = clave;
-        this.listaHistorial = listaHistorial;
-    }
-
-
-
-   
-    
-
-  
 
 }

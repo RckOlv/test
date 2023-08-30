@@ -5,12 +5,15 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+@Getter @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
-@Getter
-@Setter
 @Table(name = "rescatista")
 public class Rescatista extends Persona {
 
@@ -23,16 +26,5 @@ public class Rescatista extends Persona {
     @JoinColumn(name = "id_historial")
     @JsonIgnore //importante agregar para evitar errores de formato en la response
     private Historial historial;
-
-    public Rescatista() {
-    }
-
-    public Rescatista(String direccionTransito, Historial historial) {
-        this.direccionTransito = direccionTransito;
-        this.historial = historial;
-    }
-
-  
-   
 
 }

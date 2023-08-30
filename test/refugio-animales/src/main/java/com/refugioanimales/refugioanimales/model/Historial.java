@@ -5,12 +5,16 @@ import jakarta.persistence.*;
 
 import java.time.LocalDate;
 import java.util.List;
+
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+@Getter @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
-@Getter
-@Setter
 @Table(name = "historial")
 public class Historial {
 
@@ -46,20 +50,5 @@ public class Historial {
     @JoinColumn(name = "id_evento")
     @JsonIgnore //importante agregar para evitar errores de formato en la response
     private Evento evento;
-
-    public Historial() {
-    }
-
-    public Historial(Long id_historial, LocalDate fechaRescate, LocalDate fechaAdopcion, Adoptante adoptante, List<Rescatista> listaRescatistas, Administrador administrador, Animal animal, Estado estado, Evento evento) {
-        this.id_historial = id_historial;
-        this.fechaRescate = fechaRescate;
-        this.fechaAdopcion = fechaAdopcion;
-        this.adoptante = adoptante;
-        this.listaRescatistas = listaRescatistas;
-        this.administrador = administrador;
-        this.animal = animal;
-        this.estado = estado;
-        this.evento = evento;
-    }
 
 }
