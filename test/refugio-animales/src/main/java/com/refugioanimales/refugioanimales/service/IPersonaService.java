@@ -1,8 +1,8 @@
-package com.grupo13.refugioAnimales.service;
+package com.refugioanimales.refugioanimales.service;
 
-import com.grupo13.refugioAnimales.model.Persona;
+import com.refugioanimales.refugioanimales.model.Persona;
+
 import java.util.List;
-
 
 public interface IPersonaService {
     

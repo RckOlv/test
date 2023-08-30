@@ -2,11 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.grupo13.refugioAnimales.controller;
+package com.refugioanimales.refugioanimales.controller;
 
-import com.grupo13.refugioAnimales.model.Adoptante;
-import com.grupo13.refugioAnimales.service.IAdoptanteService;
 import java.util.List;
+
+import com.refugioanimales.refugioanimales.model.Adoptante;
+import com.refugioanimales.refugioanimales.service.IAdoptanteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;

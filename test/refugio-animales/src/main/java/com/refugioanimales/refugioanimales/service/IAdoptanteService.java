@@ -2,9 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
  */
-package com.grupo13.refugioAnimales.service;
+package com.refugioanimales.refugioanimales.service;
 
-import com.grupo13.refugioAnimales.model.Adoptante;
+import com.refugioanimales.refugioanimales.model.Adoptante;
+
 import java.util.List;
 
 

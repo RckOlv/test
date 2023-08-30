@@ -1,8 +1,8 @@
-package com.grupo13.refugioAnimales.service;
+package com.refugioanimales.refugioanimales.service;
 
-import com.grupo13.refugioAnimales.model.Raza;
+import com.refugioanimales.refugioanimales.model.Raza;
+
 import java.util.List;
-
 
 public interface IRazaService {
     

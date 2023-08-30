@@ -1,8 +1,8 @@
-package com.grupo13.refugioAnimales.service;
+package com.refugioanimales.refugioanimales.service;
 
-import com.grupo13.refugioAnimales.model.Rescatista;
+import com.refugioanimales.refugioanimales.model.Rescatista;
+
 import java.util.List;
-
 
 public interface IRescatistaService {
     

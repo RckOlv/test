@@ -1,6 +1,7 @@
-package com.grupo13.refugioAnimales.service;
+package com.refugioanimales.refugioanimales.service;
 
-import com.grupo13.refugioAnimales.model.Evento;
+import com.refugioanimales.refugioanimales.model.Evento;
+
 import java.util.List;
 
 
