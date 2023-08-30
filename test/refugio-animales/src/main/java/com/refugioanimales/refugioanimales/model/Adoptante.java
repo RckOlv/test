@@ -1,18 +1,17 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.refugioanimales.refugioanimales.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
 import java.util.List;
+
+import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Setter
 @Getter
+@Table(name = "adoptante")
 public class Adoptante extends Persona {
 
     //@Id
